@@ -72,7 +72,11 @@
                     <li><a href="./#"><i class="fa fa-tachometer-alt "></i> <span>Mi Perfil</span></a></li>
                     <li><a href="./#"><i class="fa fa-tachometer-alt "></i> <span>Mi Historial de Consultas</span></a></li>
                     <li><a href="./#"><i class="fa fa-tachometer-alt "></i> <span>Nueva Consulta</span></a></li>
-                    
+                    <li onclick="$('#salirForm').submit()"><a> <i class="fa fa-tachometer-alt"></i> <span>salir</span></a></li>
+                    <form id="salirForm" method="POST" action="{{ route('logout') }}">
+                                            @csrf
+
+                                        </form>
                 </ul>
             </section>
             <!-- /.sidebar -->

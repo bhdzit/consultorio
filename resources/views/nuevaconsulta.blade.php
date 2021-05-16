@@ -25,8 +25,6 @@
     </div>
     <div id="searchDocContainer" class="row mt-5" style="margin-top: 50px;">
     </div>
-
-
     <div id="allDocContainer" class="row mt-5" style="margin-top: 50px;">
         @forelse($doctores as $doctor)
 
