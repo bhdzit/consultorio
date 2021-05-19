@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DoctoresController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 /*
@@ -18,7 +19,7 @@ Route::get('/', function () {
     $rolDeUsuario=auth()->user()->tipUsuario;
     
     if($rolDeUsuario=="P"){
-        return view('nuevaconsulta');
+        return view('nuevaconsulta',["doctores"=> User::where("tipUsuario","=","D")->get()]);
     }
     if($rolDeUsuario=="D"){
         return redirect()->route('perfildoctor');
