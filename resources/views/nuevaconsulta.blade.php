@@ -84,7 +84,7 @@
     var json = "{{$doctores}}";
     json = json.replaceAll("&quot;", '"');
     json = JSON.parse(json);
-    console.log(json);
+    //console.log(json);
 
     function getDoc(e) {
         if (e.value.length > 0) {
@@ -101,7 +101,7 @@
                         '           <div class="box box-widget widget-user">' +
                         '               <!-- Add the bg color to the header using any of the bg-* classes -->' +
                         '               <div class="widget-user-header bg-aqua-active">' +
-                        '                   <h3 class="widget-user-username">{{$doctor->nombre." ".$doctor->apPaterno." ".$doctor->apMaterno}}</h3>' +
+                        '                   <h3 class="widget-user-username">'+json[team].nombre+'</h3>' +
                         '                   <h5 class="widget-user-desc">Founder &amp; CEO</h5>' +
                         '               </div>' +
                         '               <div class="widget-user-image">' +
