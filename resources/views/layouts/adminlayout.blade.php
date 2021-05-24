@@ -7,6 +7,7 @@
     <title>Yo voto por ti</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -29,12 +30,7 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <script src="https://kit.fontawesome.com/015cfc4544.js" crossorigin="anonymous"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    </script>
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -74,9 +70,9 @@
                     <li><a href="./#"><i class="fa fa-tachometer-alt "></i> <span>Nueva Consulta</span></a></li>
                     <li onclick="$('#salirForm').submit()"><a> <i class="fa fa-tachometer-alt"></i> <span>salir</span></a></li>
                     <form id="salirForm" method="POST" action="{{ route('logout') }}">
-                                            @csrf
+                        @csrf
 
-                                        </form>
+                    </form>
                 </ul>
             </section>
             <!-- /.sidebar -->
